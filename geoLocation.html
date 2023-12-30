@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+
+<button onclick="btn()">
+Click me</button>
+<div id="locate">
+
+</div>
+<script>
+let locate = document.getElementById("locate")
+
+function btn() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(show)
+    }
+    else{
+        locate.innerHTML="This Browser doesn't support Geolocation"
+    }
+}
+function show(position) {
+    locate.innerHTML="Longitude: "+position.coords.latitude+"<br>Longitude: "+position.coords.longitude
+}
+</script>
+</body>
+</html>

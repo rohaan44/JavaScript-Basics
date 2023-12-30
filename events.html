@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <div>
+        <h1 class="head">This Is My heading</h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore obcaecati omnis deserunt consectetur laborum odio accusamus nihil eos alias velit qui officia a, quidem ex, nulla quas doloremque unde. Nemo!</p>
+        <button class="submit">Submit here</button>
+    </div>
+    <script>
+        // Get the button element
+        let submitButton = document.querySelector(".submit");
+
+        // Add a click event listener to the button
+        submitButton.addEventListener('click', changeColor);
+
+        function changeColor() {
+            // Get the elements with class "head" and "para"
+            let head = document.querySelector(".head");
+            let para = document.querySelector(".para");
+
+            // Change the color of the heading and paragraph
+            head.style.color = 'red';
+            para.style.color = 'green';
+        }
+    </script>
+</body>
+</html>

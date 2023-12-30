@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="message.html" onsubmit="validate()">
+<input type="name" placeholder="Name" id="uname">
+<input type="password" placeholder="Password" id="pw">
+<input type="button" value="Submit Now" onclick="validate()">
+</form>
+
+
+<script>
+    function validate() {
+        let uname = document.getElementById("uname")
+        let pw = document.getElementById("pw")
+        if (uname.value.trim()=="" || pw.value.trim()=="") {
+            alert("Fill the form correctly")
+            return false
+        } else {
+            window.location.href="message.html"
+            uname.value=""
+            pw.value=""
+            true
+        } 
+    }
+</script>
+
+</body>
+</html>
